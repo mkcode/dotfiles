@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 require 'mkmf'
 
-if find_executable 'lsrc' && `lsrc`.trim.size != 0
+if find_executable 'lsrc' && `lsrc`.strip.size != 0
   puts 'already provisioned. use lsrc, rcup, mkrc, etc'
   exit 0
 end

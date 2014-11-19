@@ -1,10 +1,11 @@
 #!/usr/bin/env ruby
+
 require 'mkmf'
 
-if find_executable 'lsrc' && `lsrc`.strip.size != 0
-  puts 'already provisioned. use lsrc, rcup, mkrc, etc'
-  exit 0
-end
+# if find_executable 'lsrc' && `lsrc`.strip.size != 0
+#   puts 'already provisioned. use lsrc, rcup, mkrc, etc'
+#   exit 0
+# end
 
 unless find_executable 'rcup'
   puts 'rcm not available. installing via brew...'

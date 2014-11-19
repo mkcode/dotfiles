@@ -20,5 +20,5 @@ end
 dotfiles_path = File.expand_path(File.join(__FILE__, '../..'))
 rcrc_file     = File.expand_path(File.join(dotfiles_path, 'rcrc'))
 
-system "cp #{rcrc_file} ~/.rcrc"
+system "ln -s #{rcrc_file} ~/.rcrc"
 system "cd && rcup"

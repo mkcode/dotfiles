@@ -1,2 +1,2 @@
-EXCLUDES="README.md LICENSE"
+EXCLUDES="README.md LICENSE extras"
 DOTFILES_DIRS="$HOME/src/back-pocket/dotfiles $HOME/src/back-pocket/prezto/runcoms"

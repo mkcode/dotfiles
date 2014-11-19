@@ -1,0 +1,17 @@
+[user]
+	name = mkcode
+	email = chrisewald@gmail.com
+[color]
+	ui = true
+[core]
+	excludesfile = /Volumes/data/home/.gitignore-global
+[alias]
+        s = status
+        st = status
+        ci = commit
+        d = diff
+        b = branch
+        vr = remote -v
+        
+[push]
+	default = simple

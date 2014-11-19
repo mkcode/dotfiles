@@ -1,7 +1,10 @@
 #!/usr/bin/env ruby
 require 'mkmf'
 
-dotfiles_path = File.expand_path(File.join(__FILE__, '../..'))
+if find_executable 'lsrc' && `lsrc`.trim.size != 0
+  puts 'already provisioned. use lsrc, rcup, mkrc, etc'
+  exit 0
+end
 
 unless find_executable 'rcup'
   puts 'rcm not available. installing via brew...'
@@ -13,4 +16,8 @@ unless find_executable 'rcup'
   end
 end
 
-system("cd && rcup -d #{dotfiles_path}")
+dotfiles_path = File.expand_path(File.join(__FILE__, '../..'))
+rcrc_file     = File.expand_path(File.join(dotfiles_path, 'rcrc'))
+
+system "cp #{rcrc_file} ~/.rcrc"
+system "cd && rcup"

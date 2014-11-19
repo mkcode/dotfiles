@@ -4,7 +4,7 @@
 [color]
 	ui = true
 [core]
-	excludesfile = /Volumes/data/home/.gitignore-global
+	excludesfile = ~/.gitignore
 [alias]
         s = status
         st = status

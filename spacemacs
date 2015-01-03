@@ -10,7 +10,16 @@
  ;; Paths must have a trailing slash (ie. `~/.mycontribs/')
  dotspacemacs-configuration-layer-path '()
  ;; List of configuration layers to load.
- dotspacemacs-configuration-layers '()
+ dotspacemacs-configuration-layers '(
+                                     clojure
+                                     html
+                                     javascript
+                                     git
+                                     osx
+                                     restclient
+                                     ruby 
+                                     smex
+                                     )
  ;; A list of packages and/or extensions that will not be install and loaded.
  dotspacemacs-excluded-packages '()
 )
@@ -25,7 +34,7 @@
  ;; the value is nil then no banner is displayed.
  dotspacemacs-startup-banner 'random
  ;; Default theme applied at startup
- dotspacemacs-default-theme 'solarized-light
+ dotspacemacs-default-theme 'zenburn
  ;; The leader key
  dotspacemacs-leader-key "SPC"
  ;; Major mode leader key is a shortcut key which is the equivalent of
@@ -40,7 +49,7 @@
  ;; the commands bound to the current keystrokes.
  dotspacemacs-guide-key-delay 0.4
  ;; If non nil the frame is fullscreen when Emacs starts up (Emacs 24.4+ only).
- dotspacemacs-fullscreen-at-startup nil
+ dotspacemacs-fullscreen-at-startup t
  ;; If non nil the frame is maximized when Emacs starts up (Emacs 24.4+ only).
  ;; Takes effect only if `dotspacemacs-fullscreen-at-startup' is nil.
  dotspacemacs-maximized-at-startup nil

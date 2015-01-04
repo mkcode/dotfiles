@@ -3,3 +3,5 @@ foreman
 heroku
 chef
 berkshelf
+foodcritic
+rubocop

@@ -1,10 +1,11 @@
 [user]
-	name = mkcode
+	name = Chris Ewald
 	email = chrisewald@gmail.com
 [color]
 	ui = true
 [core]
-	excludesfile = ~/.gitignore
+	excludesfile = /Users/chris/.gitignore
+	autocrlf = input
 [alias]
         s = status
         st = status
@@ -15,3 +16,18 @@
         
 [push]
 	default = simple
+[github]
+	user = mkcode
+	oauth-token = 1b8cda31a657c5fd1a9a237fe6303fc5d83cba73
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
+[credential]
+	helper = osxkeychain

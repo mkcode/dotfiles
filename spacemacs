@@ -88,6 +88,7 @@ values."
                  js2-basic-offset 2)
      lua
      markdown
+     nginx
      (org :variables
           org-enable-github-support t)
      (osx :variables
@@ -115,6 +116,7 @@ values."
      (spell-checking :variables
                      enable-flyspell-auto-completion nil)
      syntax-checking
+     typescript
      (version-control :variables
                       version-control-diff-tool 'diff-hl
                       version-control-global-margins t)
@@ -218,7 +220,7 @@ values."
    dotspacemacs-colorize-cursor-according-to-state t
    ;; Default font, or prioritized list of fonts. `powerline-scale' allows to
    ;; quickly tweak the mode-line size to make separators look not too crappy.
-   dotspacemacs-default-font '("Source Code Pro"
+   dotspacemacs-default-font '("Source Code Pro for Powerline"
                                :size 14
                                :weight normal
                                :width normal

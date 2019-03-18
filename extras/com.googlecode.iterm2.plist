@@ -435,6 +435,8 @@
 	</dict>
 	<key>Default Bookmark Guid</key>
 	<string>5368506E-1783-4CD6-9709-23C452801374</string>
+	<key>FlashTabBarInFullscreen</key>
+	<false/>
 	<key>HideMenuBarInFullscreen</key>
 	<true/>
 	<key>HideTab</key>
@@ -488,7 +490,7 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>465 537 796 486 0 0 1680 1050 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1680 1028 0 0 1680 1027 </string>
+	<string>0 350 1378 677 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>263 184 1207 730 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
@@ -1182,9 +1184,9 @@
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowFullScreenTabBar</key>
-	<false/>
+	<true/>
 	<key>StretchTabsToFillBar</key>
-	<false/>
+	<true/>
 	<key>TabStyle</key>
 	<integer>1</integer>
 	<key>TabViewType</key>

@@ -4,8 +4,8 @@ set -e
 # This script is designed to be run as part of the strap bootstrapping process.
 # Assume that git and brew are installed. Assume that dotfiles repo is in ~.
 
-# GitHub repos to download
 GITHUB_USER="mkcode"
+# GitHub repos to download
 USER_CONFIG_REPOS=("prezto" "spacemacs")
 
 # Install location of system configuration repos
@@ -14,13 +14,6 @@ DOTFILES_REPO_PATH="$CONFIG_REPO_PREFIX/dotfiles"
 
 # Get all of our config related repos in one place
 mkdir -p "$CONFIG_REPO_PREFIX"
-
-ln -sf ~/.dotfiles "$DOTFILES_REPO_PATH"
-# if [ -d ~/.dotfiles ]; then
-#   mv ~/.dotfiles "$DOTFILES_REPO_PATH"
-#   ln -sf ~/.dotfiles "$DOTFILES_REPO_PATH"
-#   echo "Moved dotfiles repo to '$DOTFILES_REPO_PATH'"
-# fi
 
 if [ -n "$USER_CONFIG_REPOS" ]; then
   (
@@ -40,6 +33,8 @@ if [ -n "$USER_CONFIG_REPOS" ]; then
   )
 fi
 
+# Link time
+ln -sf ~/.dotfiles "$DOTFILES_REPO_PATH"
 ln -sf "$DOTFILES_REPO_PATH/Brewfile" ~/.Brewfile
 ln -sf "$DOTFILES_REPO_PATH/rcrc" ~/.rcrc
 

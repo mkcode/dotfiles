@@ -23,4 +23,4 @@ sudo dscl . -create /Users/$USER UserShell $(brew --prefix)/bin/zsh
 # We want our dotfiles dir to live elsewhere and had previously symlinked toe
 # there from home. Having a symlink to dotfiles crashes strap and makes it not
 # idempotent. So we now delete the symlink so strap stays idempotent.
-rm ~/.dotfiles
+# rm ~/.dotfiles

@@ -20,11 +20,15 @@ if [ ! -L ~/.dotfiles ]; then
   echo "Moved dotfiles repo to '$DOTFILES_REPO_PATH'"
 fi
 
-for repo in "${USER_CONFIG_REPOS[@]}"
-do
-  REPO_URL="https://github.com/$repo"
-  git clone "$REPO_URL" "$CONFIG_REPO_PREFIX"
-done
+if [ -n "$array" ]; then
+  cd "$CONFIG_REPO_PREFIX"
+  for repo in "${USER_CONFIG_REPOS[@]}"
+  do
+    REPO_URL="https://github.com/$repo"
+    git clone "$REPO_URL" .
+  done
+  cd ~
+fi
 
 # Install rcm via brew
 brew tap thoughtbot/formula

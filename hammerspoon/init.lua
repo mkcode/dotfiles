@@ -6,6 +6,18 @@ hs.logger.defaultLogLevel="info"
 
 hyper = {"cmd","ctrl"}
 
+-- Keybindings for launching apps
+appKeys = {
+  b = "Brave Browser",
+  c = "Google Chrome Canary",
+  e = "Emacs",
+  f = "Finder",
+  s = "Safari"
+}
+
+-- Bind 1 through x key to focus individual tabs in iTerm
+highTabNumber = 5
+
 hs.loadSpoon("SpoonInstall")
 spoon.SpoonInstall.use_syncinstall = true
 Install=spoon.SpoonInstall
@@ -16,7 +28,7 @@ Install:andUse("BingDaily")
 Install:andUse("Caffeine",
                {
                  hotkeys = {
-                   toggle = { hyper, "c" } },
+                   toggle = { hyper, "\\" } },
                  start = true
                }
 )
@@ -30,7 +42,7 @@ Install:andUse("MiroWindowsManager",
                    right = {hyper, "l"},
                    down = {hyper, "j"},
                    left = {hyper, "h"},
-                   fullscreen = {hyper, "f"}
+                   fullscreen = {hyper, "m"}
                  }
                }
 )
@@ -59,6 +71,25 @@ Install:andUse("ReloadConfiguration",
                }
 )
 
+-- App switching
+-- Bind appKeys
+for key, app in pairs(appKeys)
+do
+  hs.hotkey.bind(hyper, key, function()
+                   hs.application.launchOrFocus(app)
+  end)
+end
+
+-- Switch directly to individual tabs in iTerm
+for i = 1,5
+do
+  hs.hotkey.bind(hyper, tostring(i), function()
+                   hs.application.launchOrFocus("iTerm")
+                   hs.application.find("iTerm"):mainWindow():focusTab(i)
+  end)
+end
+
+-- FadeLogo is last to ensure that it confirms hammerspoon has fully loaded successfully
 Install:andUse("FadeLogo",
                {
                  config = {

@@ -18,7 +18,7 @@ defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "$ITERM2_PR
 defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
 
 # Set shell to be homebrew installed zsh
-dscl . -create /Users/$USER UserShell $(brew --prefix)/bin/zsh
+sudo dscl . -create /Users/$USER UserShell $(brew --prefix)/bin/zsh
 
 # We want our dotfiles dir to live elsewhere and had previously symlinked toe
 # there from home. Having a symlink to dotfiles crashes strap and makes it not

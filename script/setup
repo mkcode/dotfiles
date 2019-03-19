@@ -28,11 +28,11 @@ if [ -n "$USER_CONFIG_REPOS" ]; then
     do
       if [ ! -d "$repo" ]; then
         REPO_URL="https://github.com/$GITHUB_USER/$repo"
-        git clone "$REPO_URL"
+        git clone --recurse-submodules "$REPO_URL"
       else
         (
           cd "$repo"
-          git pull --autostash
+          git pull --recurse-submodules --autostash
         )
       fi
     done

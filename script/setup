@@ -14,10 +14,10 @@ DOTFILES_REPO_PATH="$CONFIG_REPO_PREFIX/dotfiles"
 # Get all of our config related repos in one place
 mkdir -p "$CONFIG_REPO_PREFIX"
 
-if [ ! -L ~/.dotfiles ]; then
-  # mv ~/.dotfiles "$DOTFILES_REPO_PATH"
-  ln -sf ~/.dotfiles "$DOTFILES_REPO_PATH"
-  echo "Linked dotfiles repo to '$DOTFILES_REPO_PATH'"
+if [ -d ~/.dotfiles ]; then
+  mv ~/.dotfiles "$DOTFILES_REPO_PATH"
+  # ln -sf ~/.dotfiles "$DOTFILES_REPO_PATH"
+  echo "Moved dotfiles repo to '$DOTFILES_REPO_PATH'"
 fi
 
 if [ -n "$USER_CONFIG_REPOS" ]; then

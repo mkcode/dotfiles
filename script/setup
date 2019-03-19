@@ -41,3 +41,6 @@ fi
 
 ln -sf "$DOTFILES_REPO_PATH/Brewfile" ~/.Brewfile
 ln -sf "$DOTFILES_REPO_PATH/rcrc" ~/.rcrc
+
+ln -sf "$CONFIG_REPO_PREFIX/spacmacs" ~/.spacemacs
+ln -sf "$CONFIG_REPO_PREFIX/prezto" ~/.zprezto

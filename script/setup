@@ -34,6 +34,7 @@ if [ -n "$USER_CONFIG_REPOS" ]; then
           cd "$repo"
           git pull --autostash
         )
+      fi
     done
   )
 fi

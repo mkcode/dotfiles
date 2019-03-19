@@ -39,4 +39,4 @@ if [ -n "$USER_CONFIG_REPOS" ]; then
 fi
 
 ln -sf "$DOTFILES_REPO_PATH/Brewfile" ~/.Brewfile
-
+ln -sf "$DOTFILES_REPO_PATH/rcrc" ~/.rcrc

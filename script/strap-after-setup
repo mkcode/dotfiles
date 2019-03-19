@@ -6,12 +6,10 @@ set -e
 
 # Install location of system configuration repos
 CONFIG_REPO_PREFIX=~/src/pocket
-# DOTFILES_REPO_PATH = "$CONFIG_REPO_PREFIX/dotfiles"
 
 ITERM2_PREFS_FILE="$CONFIG_REPO_PREFIX/dotfiles/extras/com.googlecode.iterm2.plist"
 
 # Run rcup to link all files to home
-ln -sf "$DOTFILES_REPO_PATH/rcrc" ~/.rcrc
 rcup
 
 # Specify the preferences directory

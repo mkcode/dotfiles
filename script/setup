@@ -17,7 +17,7 @@ mkdir -p "$CONFIG_REPO_PREFIX"
 
 if [ -d ~/.dotfiles ]; then
   mv ~/.dotfiles "$DOTFILES_REPO_PATH"
-  # ln -sf ~/.dotfiles "$DOTFILES_REPO_PATH"
+  ln -sf ~/.dotfiles "$DOTFILES_REPO_PATH"
   echo "Moved dotfiles repo to '$DOTFILES_REPO_PATH'"
 fi
 

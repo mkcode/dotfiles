@@ -18,3 +18,6 @@ rcup
 defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "$ITERM2_PREFS_FILE"
 # Tell iTerm2 to use the custom preferences in the directory
 defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
+
+# Set shell to be homebrew installed zsh
+dscl . -create /Users/$USER UserShell $(brew --prefix)/bin/zsh

@@ -24,6 +24,7 @@ brew 'rbenv-default-gems'
 # brew 'unrar'
 # brew 'wget'
 # brew 'youtube-dl'
+brew 'zsh'
 
 # cask 'arq'
 # cask 'atom'

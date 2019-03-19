@@ -10,6 +10,10 @@ CONFIG_REPO_PREFIX=~/src/pocket
 
 ITERM2_PREFS_FILE="$CONFIG_REPO_PREFIX/dotfiles/extras/com.googlecode.iterm2.plist"
 
+# Run rcup to link all files to home
+ln -sf "$DOTFILES_REPO_PATH/rcrc" ~/.rcrc
+rcup
+
 # Specify the preferences directory
 defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "$ITERM2_PREFS_FILE"
 # Tell iTerm2 to use the custom preferences in the directory

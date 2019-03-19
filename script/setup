@@ -20,7 +20,7 @@ if [ ! -L ~/.dotfiles ]; then
   echo "Moved dotfiles repo to '$DOTFILES_REPO_PATH'"
 fi
 
-if [ -n "$array" ]; then
+if [ -n "$USER_CONFIG_REPOS" ]; then
   cd "$CONFIG_REPO_PREFIX"
   for repo in "${USER_CONFIG_REPOS[@]}"
   do
@@ -30,14 +30,16 @@ if [ -n "$array" ]; then
   cd ~
 fi
 
+ln -sf "$DOTFILES_REPO_PATH/Brewfile" ~/.Brewfile
+
 # Install rcm via brew
-brew tap thoughtbot/formula
-brew install rcm
+# brew tap thoughtbot/formula
+# brew install rcm
 
-# Need to get this one file first.
-ln -sf "$DOTFILES_REPO_PATH/rcrc" ~/.rcrc
+# # Need to get this one file first.
+# ln -sf "$DOTFILES_REPO_PATH/rcrc" ~/.rcrc
 
-rcup
+# rcup
 
 # Symlink dot/* into home directory as hidden files
 # for f in $(ls -d ~/.dotfiles/dot/*); do ln -sfn $f ~/.$(basename $f); done

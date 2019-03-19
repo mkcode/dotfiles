@@ -8,13 +8,13 @@ set -e
 USER_CONFIG_REPOS=("prezto" "spacemacs")
 
 # Install location of system configuration repos
-CONFIG_REPO_PREFIX="~/src/pocket"
+CONFIG_REPO_PREFIX=~/src/pocket
 DOTFILES_REPO_PATH="$CONFIG_REPO_PREFIX/dotfiles"
 
 # Get all of our config related repos in one place
 mkdir -p "$CONFIG_REPO_PREFIX"
 
-if [ ! -L "~/.dotfiles" ]; then
+if [ ! -L ~/.dotfiles ]; then
   mv ~/.dotfiles "$DOTFILES_REPO_PATH"
   ln -sf "$DOTFILES_REPO_PATH" ~/.dotfiles
   echo "Moved dotfiles repo to '$DOTFILES_REPO_PATH'"

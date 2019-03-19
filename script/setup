@@ -25,7 +25,7 @@ if [ -n "$USER_CONFIG_REPOS" ]; then
   for repo in "${USER_CONFIG_REPOS[@]}"
   do
     REPO_URL="https://github.com/$repo"
-    git clone "$REPO_URL"
+    git clone "$REPO_URL" || true
   done
   cd ~
 fi

@@ -4,8 +4,8 @@ set -e
 # This script is designed to be run as part of the strap bootstrapping process.
 # Assume that git and brew are installed. Assume that dotfiles repo is in ~.
 
-# GitHub user repos to download
-USER_CONFIG_REPOS=("prezto" "spacemacs")
+# GitHub repos to download
+USER_CONFIG_REPOS=("mkcode/prezto" "mkcode/spacemacs")
 
 # Install location of system configuration repos
 CONFIG_REPO_PREFIX=~/src/pocket
@@ -20,15 +20,11 @@ if [ ! -L ~/.dotfiles ]; then
   echo "Moved dotfiles repo to '$DOTFILES_REPO_PATH'"
 fi
 
-if [ -n "$STRAP_GITHUB_USER" ]; then
-  cd "$CONFIG_REPO_PREFIX"
-  for repo in "${USER_CONFIG_REPOS[@]}"
-  do
-    REPO_URL="https://github.com/$STRAP_GITHUB_USER/$repo"
-    git clone "$REPO_URL" .
-  done
-  cd ~
-fi
+for repo in "${USER_CONFIG_REPOS[@]}"
+do
+  REPO_URL="https://github.com/$repo"
+  git clone "$REPO_URL" "$CONFIG_REPO_PREFIX"
+done
 
 # Install rcm via brew
 brew tap thoughtbot/formula

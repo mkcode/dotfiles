@@ -65,6 +65,9 @@ brew 'rcm'
 tap 'd12frosted/emacs-plus'
 brew 'emacs-plus'
 
+tap 'heroku/brew'
+brew 'heroku'
+
 # Homebrew Fonts
 #
 tap 'caskroom/fonts'

@@ -10,6 +10,8 @@ brew 'colortail'
 brew 'fasd'
 brew 'ffmpeg'
 brew 'fortune'
+brew 'git'
+brew 'git-lfs'
 brew 'global'
 brew 'gpg'
 brew 'jenv'
@@ -24,6 +26,7 @@ brew 'rbenv-default-gems'
 brew 'sox'
 brew 'sqlite'
 brew 'unrar'
+brew 'watchman'
 brew 'wget'
 brew 'youtube-dl'
 brew 'zsh'
@@ -55,9 +58,11 @@ cask 'safari-technology-preview'
 cask 'skype'
 cask 'slack'
 cask 'spotify'
+cask 'tor-browser'
 cask 'transmission'
 cask 'virtualbox'
 cask 'vlc'
+cask 'zeplin'
 cask 'zoomus'
 
 # Specific taps
@@ -70,6 +75,10 @@ brew 'emacs-plus'
 
 tap 'heroku/brew'
 brew 'heroku'
+
+# OpenJDK 8 for use with android-studio
+# tap 'AdoptopenJDK/openjdk'
+# cask 'adoptopenjdk8'
 
 # Homebrew Fonts
 #

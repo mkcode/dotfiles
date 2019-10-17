@@ -9,10 +9,12 @@ hyper = {"cmd","ctrl"}
 -- Keybindings for launching apps
 appKeys = {
   b = "Brave Browser",
-  c = "Google Chrome Canary",
+  c = "Google Chrome",
   e = "Emacs",
   f = "Finder",
-  s = "Safari"
+  p = "Postman",
+  s = "Safari",
+  x = "xCode"
 }
 
 -- Bind 1 through x key to focus individual tabs in iTerm
@@ -35,6 +37,12 @@ Install:andUse("Caffeine",
 
 -- Disable window size transition animations
 hs.window.animationDuration = 0.0
+
+-- Add simple screen window movement commands
+
+hs.hotkey.bind(hyper, "i", function() hs.window.focusedWindow():moveOneScreenWest() end)
+hs.hotkey.bind(hyper, "o", function() hs.window.focusedWindow():moveOneScreenEast() end)
+
 Install:andUse("MiroWindowsManager",
                {
                  hotkeys = {

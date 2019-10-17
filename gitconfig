@@ -4,15 +4,18 @@
 [color]
 	ui = true
 [core]
-  excludesfile = ~/.gitignore
+	excludesfile = ~/.gitignore
 	autocrlf = input
 [alias]
         s = status
         st = status
+        co = checkout
         ci = commit
         d = diff
         b = branch
         vr = remote -v
+        branch-name = rev-parse --abbrev-ref HEAD
+        pub = !git push -u origin $(git branch-name)
         
 [push]
 	default = simple
@@ -24,3 +27,5 @@
 	required = true
 [credential]
 	helper = osxkeychain
+[rerere]
+	enabled = true

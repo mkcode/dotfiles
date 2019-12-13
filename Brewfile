@@ -104,7 +104,7 @@ tap 'heroku/brew'
 brew 'heroku'
 
 tap 'mongodb/brew'
-brew 'mongodb-community
+brew 'mongodb-community-compass'
 
 # OpenJDK 8 for use with android-studio
 # tap 'AdoptopenJDK/openjdk'

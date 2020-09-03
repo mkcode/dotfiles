@@ -3,6 +3,9 @@
 	email = chrisewald@gmail.com
 [color]
 	ui = true
+  # This is a change in the rebase-branch branch
+  # These are some more comments.
+  # Third time is the charm.
 [core]
   # Add more and more comments
 	excludesfile = ~/.gitignore
